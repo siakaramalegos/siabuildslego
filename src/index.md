@@ -5,7 +5,7 @@ title: Sia Builds Lego
 
 # Sia Builds Lego
 
-<img src="/img/sia_karamalegos_lego_mechanic.jpg" alt="Female Lego mechanic at a wheel alignment equipment thing - from the Corner Station set. Photo by Sia Karamalegos" width="2296" height="1722" style="max-width:500px">
+<img src="/img/sia_karamalegos_lego_mechanic.jpg" alt="Female Lego mechanic at a wheel alignment equipment thing - from the Corner Station set. Photo by Sia Karamalegos" width="2296" height="1722" style="width:500px">
 
 <p class="lead">Hi, I'm Sia!</p>
 

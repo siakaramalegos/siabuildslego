@@ -1,0 +1,6 @@
+<ul class="ul-reset">
+  {% for post in collections.blog %}
+  {{ post.data.title | log }}
+    <li><time class="dt-published" datetime="{{ post.date }}">{{ post.date | readableDate }}</time> <a href="{{ post.url }}">{{ post.data.title }}</a> <br>{{ post.data.description }}</li>
+  {% endfor %}
+  </ul>

@@ -1,0 +1,11 @@
+---
+layout: base
+---
+
+<section>
+  <div class="container flow">
+    <h1>{{ title }}</h1>
+    <p><time class="dt-published" datetime="{{ date }}">{{ date | readableDate }}</time></p>
+    {{ content | safe }}
+  </div>
+</section>

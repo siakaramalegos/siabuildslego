@@ -1,6 +1,14 @@
+const filters = require('./src/_11ty/filters');
+
 module.exports = function (eleventyConfig) {
+  // Filters
+  Object.keys(filters).forEach(filterName => {
+    eleventyConfig.addFilter(filterName, filters[filterName])
+  })
+
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
   eleventyConfig.addLayoutAlias("home", "layouts/home.njk");
+  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   eleventyConfig.addPassthroughCopy("src/img/");
   eleventyConfig.addPassthroughCopy("src/style.css");

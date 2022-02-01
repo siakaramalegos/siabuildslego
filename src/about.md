@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Sia Builds Lego: About"
+title: About
 ---
 
 # About

@@ -1,0 +1,103 @@
+/* variables */
+:root {
+  --font-body: Georgia, "Times New Roman", Times, serif;
+  --font-display: Georgia, "Times New Roman", Times, serif;
+
+  --white: #fff;
+  --grey-100: hsla(220, 10%, 83%, 1); /* #D0D3D9 */
+  --black: #333;
+
+  --blue-300: hsla(207, 96%, 43%, 1); /* #0476D9 */
+  --blue-400: hsla(214, 95%, 38%, 1); /* #0455BF */
+
+  --yellow-100: hsla(44, 93%, 55%, 1); /* #F8C025 */
+  --yellow-200: hsla(44, 93%, 55%, 1); /* #F8C025 */
+
+  --tan-200: hsla(33, 48%, 70%, 1); /* #D9B991 */
+
+  --size-200: 0.694rem;
+  --size-300: 0.833rem;
+  --size-400: 1rem;
+  --size-500: 1.2rem;
+  --size-600: 1.44rem;
+  --size-700: 1.728rem;
+  --size-800: 2.074rem;
+  --size-900: 2.488rem;
+  --size-1000: 2.986rem;
+}
+
+/* reset */
+*,*::before,*::after {box-sizing: border-box;}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd {margin: 0;}ul[role="list"],ol[role="list"]{list-style:none;}html:focus-within{scroll-behavior:smooth;}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5;}a:not([class]){text-decoration-skip-ink:auto;}img,picture{height:auto;max-width:100%;display:block;}input,button,textarea,select{font:inherit;}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto;}*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior: auto !important;}}
+
+/* styles */
+body {
+  background-color: var(--white);
+  color: var(--black);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: var(--font-body);
+  font-size: 100%; /* 16px */
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--blue-400);
+  font-family: var(--font-display);
+  line-height: 1.3;
+}
+h1 {font-size: clamp(var(--size-900), 5vw, 4rem)}
+h2, h2 code {font-size: var(--size-800);}
+h3, h3 code {font-size: var(--size-700);}
+h4 {font-size: var(--size-600);}
+h5 {font-size: var(--size-500);}
+small {font-size: var(--size-300);}
+.flow > * + * { margin-top: var(--flow-space, 1em);}
+blockquote, aside {--flow-space: var(--size-700)}
+p, li, aside, li code, p code {line-height: 1.7;}
+ul, ol {padding-left: 2.5em;}
+li { margin-top: 0.5em; margin-bottom: 0.5em; padding-left: 0.6em;}
+li::marker {
+  font-size: var(--size-400);
+  font-weight: 700;
+}
+ul:not(.ul-reset) li::marker {content: '■ ';}
+p.lead {font-size: var(--size-500);}
+a { color: var(--blue-400) }
+a:hover { color: var(--blue-300)}
+:focus {
+  outline: 2px dashed var(--yellow-200);
+  outline-offset: .25rem;
+}
+.container {
+  max-width: 1332px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+ul.ul-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.ul-reset li {padding: 0;}
+
+.bg-dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+.bg-dark a {color: var(--yellow-200);}
+.bg-dark a:hover {color: var(--yellow-100);}
+
+nav ul {
+  display: flex;
+  gap: var(--size-400);
+}
+
+footer {
+  padding-top: var(--size-400);
+  padding-bottom: var(--size-400);
+}
+
+@media screen and (min-width: 500px) {
+  html, body {
+    font-size: 112.5%;
+  } /*18px*/
+}

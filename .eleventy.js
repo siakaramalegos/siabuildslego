@@ -1,9 +1,15 @@
 const filters = require('./src/_11ty/filters');
+const shortcodes = require("./src/_11ty/shortcodes");
 
 module.exports = function (eleventyConfig) {
   // Filters
   Object.keys(filters).forEach(filterName => {
     eleventyConfig.addFilter(filterName, filters[filterName])
+  })
+
+  // Shortcodes
+  Object.keys(shortcodes).forEach(shortcodeName => {
+    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
   })
 
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");

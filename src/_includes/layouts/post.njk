@@ -2,10 +2,11 @@
 layout: base
 ---
 
-<section>
+<section class="post">
   <div class="container flow">
     <h1>{{ title }}</h1>
-    <p><time class="dt-published" datetime="{{ date }}">{{ date | readableDate }}</time></p>
+    <p class="lead">{{ description }}</p>
+    <p class="muted">by Sia Karamalegos <br><time class="dt-published" datetime="{{ date }}">{{ date | readableDate }}</time></p>
     {{ content | safe }}
   </div>
 </section>
